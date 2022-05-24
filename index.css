@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.application {
+  margin: 20px auto;
+}
+.username_form {
+  margin: 10px auto;
+  width: max-content;
+}
+.chat_container {
+  border: 1px solid black;
+  padding: 20px;
+  margin: 0 auto;
+  width: 90%;
+}
+.message_container {
+  width: 100%;
+  height: 70vh;
+  border: 1px solid red;
+  margin-bottom: 10px;
+  list-style: none;
+}
+.message_container li {
+  padding: 5px;
+  background-color: aqua;
+  width: max-content;
+  margin: 10px;
+}
+.chat_container input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}

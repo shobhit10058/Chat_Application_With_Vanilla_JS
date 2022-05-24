@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="./index.js" defer></script>
+    <title>Chat Application</title>
+  </head>
+  <body>
+    <div class="application">
+      <form class="username_form">
+        <input type="text" placeholder="username..." />
+        <button type="button">Connect</button>
+      </form>
+      <div class="chat_container">
+        <ul class="message_container"></ul>
+        <input type="text" />
+      </div>
+    </div>
+  </body>
+</html>
