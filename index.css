@@ -21,6 +21,7 @@
   border: 1px solid red;
   margin-bottom: 10px;
   list-style: none;
+  overflow: scroll;
 }
 .message_container li {
   padding: 5px;
