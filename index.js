@@ -16,7 +16,6 @@ const options = {
   clientId: clientId,
   protocolId: "MQTT",
   secureProtocol: "TLS_method",
-  ca: "broker.emqx.io-ca.crt",
   protocolVersion: 4,
   clean: true,
   reconnectPeriod: 1000,
