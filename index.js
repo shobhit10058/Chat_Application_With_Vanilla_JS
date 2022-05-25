@@ -12,12 +12,14 @@ connectButton.setAttribute("disabled", true);
 
 const clientId = "mqttjs_" + Math.random().toString(16).substring(2, 8);
 
-const host = "ws://broker.emqx.io:8083/mqtt";
+const host = "wss://broker.emqx.io:8084/mqtt";
 
 const options = {
   keepalive: 60,
   clientId: clientId,
   protocolId: "MQTT",
+  secureProtocol: "TLS_method",
+  ca: "broker.emqx.io-ca.crt",
   protocolVersion: 4,
   clean: true,
   reconnectPeriod: 1000,
@@ -47,7 +49,6 @@ client.on("connect", () => {
   // Subscribe
   client.subscribe(CHANNEL_NAME, { qos: 0 });
   connectButton.removeAttribute("disabled");
-  // Publish
 });
 
 // Received
@@ -60,6 +61,7 @@ client.on("message", (topic, message, packet) => {
   messageContainer.append(newMessage);
 });
 
+// send Message
 const sendMessage = (channelName, message) => {
   client.publish(channelName, message, {
     qos: 0,
