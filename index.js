@@ -1,7 +1,3 @@
-const HOST = "broker.emqx.io";
-const PORT = 8083;
-const CHANNEL_NAME = "main";
-
 const inputMessage = document.querySelector(".chat_container input");
 const messageContainer = document.querySelector(".message_container");
 const usernameInput = document.querySelector(".username_form input");
@@ -13,6 +9,7 @@ connectButton.setAttribute("disabled", true);
 const clientId = "mqttjs_" + Math.random().toString(16).substring(2, 8);
 
 const host = "wss://broker.emqx.io:8084/mqtt";
+const CHANNEL_NAME = "main";
 
 const options = {
   keepalive: 60,
